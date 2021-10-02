@@ -37,26 +37,14 @@ def start_timer():
     else:
         timer_label.config(text="Work", fg=GREEN)
         countdown(work_sec)
-
-    """My own method"""
-    # if reps == 1 or reps == 3 or reps == 5 or reps == 7:
-    #     print("b")
-    #     countdown(6)
-    #     # print("c")
-    # elif reps == 2 or reps == 4 or reps == 6:
-    #     print("d")
-    #     countdown(3)
-    #     print("e")
-    # elif reps == 8:
-    #     print("f")
-    #     countdown(4)
-    #     print("g")
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- # 
 def countdown(remaining_time):
     # print(remaining_time)
     remaining_time_min = math.floor(remaining_time / 60)
+    
     """Below method is also correct."""
     # remaining_time_min = remaining_time // 60
+    
     remaining_time_sec = remaining_time % 60
     if remaining_time_sec < 10:
         remaining_time_sec = f"0{remaining_time_sec}"
